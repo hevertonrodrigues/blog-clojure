@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>{{post.title}}</title>
+    <link rel='stylesheet' href='/css/bootstrap.min.css' type='text/css' media='screen' charset='utf-8'>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-latest.js'></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="page-header">
+          <h1>{{post.title}}</h1>
+          <datetime>{{post.created_at}}</datetime>
+        </div>
+      </div>
+      <div class="row">
+        <p>{{post.body}}<p>
+        <a href="/">Back</a>
+      </div>
+  </div>
+  </body>
+</html>
+

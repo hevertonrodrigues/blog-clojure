@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Clojure Blog</title>
+    <link rel='stylesheet' href='/css/bootstrap.min.css' type='text/css' media='screen' charset='utf-8'>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-latest.js'></script>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/admin" target="_blank">Admin</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="page-header">
+          <h1>List of Posts</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-8">
+          {{#posts}}
+            <h2>{{title}}</h2>
+            <datetime>{{created_at}}</datetime>
+            <p>{{body}}<p>
+          {{/posts}}
+        </div>
+
+        <div class="hidden-xs hidden-sm col-md-4">
+          {{#posts}}
+            <div class="panel panel-default">
+              <div class="panel-body">
+              <h3>{{title}}</h3>
+              <datetime>{{created_at}}</datetime>
+              <br>
+              <a href="/posts/{{id}}">Read more</a>
+              </div>
+            </div>
+          {{/posts}}
+        </div>
+
+      </div>
+  </div>
+  </body>
+</html>
